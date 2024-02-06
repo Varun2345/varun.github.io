@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BLOGS</title>
+    <style>
+        @keyframes slideIn {
+            from {
+                transform: translateY(10%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .blog {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 35px;
+            margin-left: 200px;
+        }
+
+        .like-btn {
+            color: rgb(247, 0, 0);
+        }
+
+        .comment-section {
+            margin-top: 10px;
+        }
+    </style>
+
+</head>
+
+<body style="background-image: url(ftheme.jpg);background-repeat: repeat-y;background-size: 107%;">
+    <h2 style="text-decoration: underline; font-size: 50px;margin-left: 200px;transform: translateY(100%); animation: slideIn 1s infinite alternate;"
+        id="blogs">
+        Blogs:
+    </h2>
+    <h1 style="font-size: 40px;margin-left: 200px;"><b>1.)</b> INDIAN INSTITUTE OF INFORMATION TECHNOLOGY HYDERABAD:
+    </h1>
+    <p style="font-size:2em;margin-left: 200px;">
+        IIITH, situated in Hyderabad, is a leading institute renowned for
+        innovation and learning. Its modern campus fosters a lively environment for students and faculty to collaborate.
+        Research at IIITH spans areas like artificial intelligence and robotics, aimed at addressing real-world
+        challenges. The institute prepares students for leadership roles through hands-on projects and mentorship,
+        fostering entrepreneurship and collaboration. IIITH embraces diversity, creating a supportive atmosphere for
+        learning and creativity. Campus life is vibrant, with various events catering to diverse interests. Beyond
+        academics, IIITH is committed to making a positive impact locally through outreach programs. Overall, IIITH
+        stands as a hub of innovation, shaping future leaders and making a difference in the world.</p>
+
+    <div class="blog" id="blog1">
+        <h2>Placeholder Blog 1</h2>
+        <button class="like-btn" style="font-size: 30px;height: 40px;" onclick="likePost(this)">Like</button>
+        <span>0</span>
+        <div class="comment-section">
+            <textarea style="font-size: 20px;" id="commentInput_blog1" placeholder="Add a comment" rows="4"
+                cols="50"></textarea>
+
+            <button style="font-size: 20px;" onclick="addComment('blog1')">Add Comment</button>
+            <div id="comments_blog1"></div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <h1 style="font-size: 40px;margin-left: 200px;"><b>2.)</b> <span style="text-decoration:underline;">HYPERLOOP</span>
+        <span style="text-decoration:underline;">TECHNOLOGY:</span>
+    </h1>
+    <p style="font-size:2em;margin-left: 200px;">
+
+        The Hyperloop, often described as the "fifth mode of transportation".
+        Hyperloop technology, proposed by Elon Musk in 2013, envisions a high-speed transportation system with passenger
+        pods moving through low-pressure tubes. Using magnetic levitation and linear induction motors, the pods aim to
+        achieve remarkable speeds, surpassing traditional modes of transportation. The low-pressure environment
+        minimizes air resistance, enhancing energy efficiency.This revolutionary concept aims to significantly
+        reduce travel times between major cities, presenting a sustainable alternative to conventional modes of
+        transportation. Pods travel within tubes at near-supersonic speeds, offering the potential for reaching
+        destinations in record time. While the technology's promise is exciting, challenges such as infrastructure
+        development, regulatory approvals, and safety considerations must be addressed.
+    </p>
+    <div style="margin-bottom: 160px;" class="blog" id="blog2">
+        <h2>Placeholder Blog 2</h2>
+        <button class="like-btn" style="font-size: 30px;height: 40px;" onclick="likePost(this)">Like</button>
+        <span>0</span>
+        <div class="comment-section">
+            <textarea style="font-size: 20px;" id="commentInput_blog2" placeholder="Add a comment" rows="4"
+                cols="50"></textarea>
+
+            <button style="font-size: 20px;" onclick="addComment('blog2')">Add Comment</button>
+            <div id="comments_blog2"></div>
+        </div>
+    </div>
+
+    <script>
+        function likePost(button) 
+        {
+            var likeCount = button.nextElementSibling;
+            var currentCount = parseInt(likeCount.textContent);
+            var newCount = currentCount === 0 ? 1 : 0;
+            likeCount.textContent = newCount;
+            button.textContent = newCount === 1 ? "Liked" : "Like";
+        }
+
+        function addComment(blogId) 
+        {
+            const commentInput = document.getElementById(`commentInput_${blogId}`);
+            const commentsContainer = document.getElementById(`comments_${blogId}`);
+            const comment = commentInput.value.trim();
+
+            if (comment !== "") 
+            {
+                commentsContainer.innerHTML += `<p>${comment}</p>`;
+                commentInput.value = "";
+            }
+        }
+        
+
+    </script>
+</body>
+
+</html>

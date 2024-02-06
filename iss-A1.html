@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        .name {
+            font-size: 80px;
+            font-weight: 600;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: fade 1s infinite alternate;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.95);
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(10%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .div1 {
+            width: 100%;
+            line-height: 60px;
+            position: fixed;
+            z-index: 1000;
+        }
+
+
+        nav ul li {
+            display: inline;
+        }
+
+
+        .sty2 a {
+            font-size: 30px;
+            font-style: normal;
+            padding-left: 20px;
+            padding-right: 20px;
+            text-decoration: none;
+            font-weight: lighter;
+            transition: 0.2s;
+
+        }
+
+        .sty2 a:hover {
+            font-weight: 900;
+        }
+
+        .img {
+            width: 25vw;
+            height: 25vw;
+            margin-top: 4vw;
+            margin-right: 15vw;
+            border-radius: 30px;
+        }
+
+        .sty3 {
+            margin-top: 80px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .tab {
+
+            table,
+            th,
+            td {
+                border-color: black;
+            }
+        }
+
+        .blog {
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 35px;
+            margin-left: 200px;
+        }
+
+        .like-btn {
+            color: rgb(247, 0, 0);
+        }
+
+        .comment-section {
+            margin-top: 10px;
+        }
+
+
+        .lightmode {
+
+            background-image: url(ftheme.jpg);
+            background-size: 107% 100%;
+            background-repeat: repeat-y;
+            color: black;
+
+            .div1 {
+                background-image: url(ftheme.jpg);
+                background-size: 100%;
+            }
+
+            .sty2 a {
+                color: black;
+            }
+
+            .tab {
+
+                table,
+                th,
+                td {
+                    border-color: black;
+                }
+            }
+
+            .hplink {
+                color: rgb(211, 34, 105);
+            }
+
+        }
+
+        .darkmode {
+            background-image: url(dtheme.jpg);
+            background-size: 107%;
+            background-repeat: repeat-y;
+            color: white;
+
+            .div1 {
+                background-color: rgb(9, 10, 11);
+            }
+
+            .sty2 a {
+                color: white;
+            }
+
+            .blog {
+                border: 1px solid white;
+            }
+
+            .tab {
+
+                table,
+                th,
+                td {
+                    border-color: white;
+                }
+            }
+
+            .hplink {
+                color: rgb(0, 157, 255);
+            }
+
+
+        }
+    </style>
+</head>
+
+<body class="darkmode">
+
+    <script>
+        function togglemode() {
+            document.body.classList.toggle('darkmode');
+            document.body.classList.toggle('lightmode');
+        }
+    </script>
+
+    <div class="div1">
+        <nav>
+            <ul>
+                <li class="sty2"><a href="#AboutMe"> AboutMe </a></li>
+                <li class="sty2"><a href="#Eb"> Educational background </a></li>
+                <li class="sty2"><a href="#Ac"> Achievements </a></li>
+                <li class="sty2"><a href="#skills"> Skills </a></li>
+                <li class="sty2"><a href="blog.html" target="_blank"> Blogs </a></li>
+                <li class="sty2"><a href="#links"> Links </a></li>
+                <li class="sty2"><a style=" cursor: pointer " onclick="togglemode()"> Toggle format </a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <br><br><br><br>
+
+    <table style="padding-top:210px; padding-bottom: 40px;">
+        <tr>
+            <td style="font-size: 35px ;">
+                <p style="margin-left: 2vw;width: 70%;">
+                    <span class="name">Hi,I am Varun</span>
+                    <br>I am a dedicated CSE student at IIIT Hyderabad,deeply engrossed
+                    in the world
+                    With a penchant for solving complex problems,I find joy in crafting efficient solutions.
+                    Eager to
+                    explore cutting-edge technologies, I am committed to continuous learning and making a
+                    meaningful
+                    impact.
+                    My involvement in collaborative coding projects has honed my ability to work seamlessly
+                    within a
+                    team, fostering effective communication and project management skills
+                </p>
+            </td>
+            <td>
+                <img src="p3.jpg" class="img">
+            </td>
+        </tr>
+    </table>
+
+
+    <h2 style="text-decoration: underline; font-size: 50px;padding-top: 200px;margin-left: 150px; transform: translateY(100%); animation: slideIn 1s infinite alternate;"
+        id="AboutMe">
+        AboutMe:
+    </h2>
+    <p>
+    <ul style="font-size: 35px; list-style-type:square;padding-bottom: 350px;margin-left: 150px;">
+        <li> Hello! My name is Varun Alokam. </li>
+        <li> I am a student hailing from Guntur, Andhra Pradesh.</li>
+        <li> I carry the essence of Telugu culture and language. </li>
+        <li> Fluent in Telugu, proficient in Hindi, and proficient in English.</li>
+        <li> I am currently in my first year of B.Tech in the CSE branch at IIIT Hyderabad. </li>
+        <li> My hobbies include playing badminton. </li>
+        <li> I also Love watching Movies,Web series and Reading Novels. </li>
+        <li> I am passionate about Web development. </li>
+        <li>Embracing my roots while thriving in a multicultural environment at IIIT Hyderabad,<br>where a passion
+            for
+            technology meets a rich tapestry of languages and cultures.</li>
+    </ul>
+    </p>
+
+
+
+    <h2 style="text-decoration: underline; font-size: 50px;margin-left: 150px;padding-top: 300px; transform: translateY(100%); animation: slideIn 1s infinite alternate;"
+        id="Eb">
+        Educational Background:
+    </h2>
+    <p>
+    <table style="height: 50%; width: 80%; border-collapse: collapse;font-size:40px;margin-left: 250px;" class="table">
+        <tr>
+            <th style="border: 2px solid">
+                Educational Qualification
+            </th>
+            <th style="border: 2px solid">
+                Institution and location
+            </th>
+        </tr>
+        <tr>
+            <td style="border: 2px solid ;text-align:center">
+                class 1- 5
+            </td>
+            <td style="border: 2px solid ;text-align:center">
+                pragati school,sattenapalli.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid ;text-align:center">
+                class 6- 10
+            </td>
+            <td style="border: 2px solid ;text-align:center">
+                Kkr gowtham high school,Guntur.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid ;text-align:center">
+                class 11,12
+            </td>
+            <td style="border: 2px solid ;text-align:center">
+                Bhashyam junior college,Guntur.
+            </td>
+        </tr>
+        <tr>
+            <td style="border: 2px solid ;text-align:center">
+                B-tech CSE(at present)
+            </td>
+            <td style="border: 2px solid ;text-align:center">
+                IIIT hyderabad,gachibowli.
+            </td>
+        </tr>
+    </table>
+    </p>
+
+    <h2 style="text-decoration: underline; font-size: 50px;padding-top: 300px;margin-left: 200px;margin-top: 365px; transform: translateY(100%); animation: slideIn 1s infinite alternate; "
+        id="Ac">
+        Achievements:
+    </h2>
+    <p>
+    <ul style="font-size: 40px; list-style-type:square;padding-bottom: 300px;margin-left: 200px;;">
+        <li>I have secured 600 Marks in Class 10th Board Exam.</li>
+        <li>I have passed Class 12th Board with 98%.</li>
+        <li> JEE Mains: <b>AIR 1108.</b></li>
+        <li> JEE Adavanced:<b> AIR 1638.</b></li>
+    </ul>
+    </p>
+
+    <h2 style="text-decoration: underline; font-size: 50px;padding-top:300px;margin-left: 200px;margin-top: 250px;transform: translateY(100%); animation: slideIn 1s infinite alternate;"
+        id="skills">
+        Skills:
+    </h2>
+    <p>
+    <ul style="font-size: 40px; list-style-type:square;padding-bottom: 300px;margin-left: 200px;">
+        <li> C language</li>
+        <li> C++ language</li>
+        <li> Python </li>
+        <li> Bashscript </li>
+        <li> HTML and CSS </li>
+    </ul>
+    </p>
+
+    <h2 id="links"
+        style="margin-left: 200px;font-size: 50px;text-decoration: underline;margin-left: 200px;padding-top: 300px;transform: scale(0.9); animation:scaleIn 1s infinite alternate">
+        Connect With Me:
+    </h2>
+    <div style="margin-left: 200px;">
+        <a href="https://www.instagram.com/varun_4949/" target="_blank">
+            <img src="instagram.png" style="width:60px;height: 60px;margin-right: 30px;border-radius: 15px;">
+        </a>
+
+        <a href="https://github.com/Varun2345" target="_blank">
+            <img src="github.webp" style="width:60px;height: 60px;margin-right: 30px;border-radius: 15px;">
+        </a>
+
+        <a href="mailto:alokamvarun@gmail.com" target="_blank">
+            <img src="gmail.png" style="width:60px;height: 60px;margin-right: 30px;">
+        </a>
+    </div>
+    <h2
+        style="margin-left: 200px;font-size: 50px;text-decoration: underline;margin-left: 200px;transform: scale(0.9); animation:scaleIn 1s infinite alternate">
+        Hyperlink to
+        anime_pdf:
+    </h2>
+    <div style="padding-bottom: 300px;">
+        <a class="hplink" style="margin-left: 200px;font-size: 50px;" href="anim_en.pdf" target="_blank"> Open file </a>
+    </div>
+</body>
+
+</html>
